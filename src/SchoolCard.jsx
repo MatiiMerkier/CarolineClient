@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal';
 import './SchoolCard.css';
-import rankA from '../public/rank_a.png'; 
-import rankB from '../public/rank_b.png';
-import rankC from '../public/rank_c.png';
-import rankD from '../public/rank_d.png';
-import rankF from '../public/rank_f.png'; 
+import rankA from '/rank_a.png'; 
+import rankB from '/rank_b.png';
+import rankC from '/rank_c.png';
+import rankD from '/rank_d.png';
+import rankF from '/rank_f.png'; 
+//OLD PATH: '../public/rank_a.png'
 
 const SchoolCard = ({schools, selectedSchool, onSelect, alreadySelected, compareData, compareStatus}) => {
     const [showModal, setShowModal] = useState(false);
@@ -50,7 +51,7 @@ const SchoolCard = ({schools, selectedSchool, onSelect, alreadySelected, compare
 
             {!compareStatus && (
                 <div className="card-main-container-content">
-                    <img src="../public/school.jpg" alt="icon"/>
+                    <img src="/school.jpg" alt="icon"/>
                     <h4>{selectedSchoolData ? selectedSchoolData.Institution : 'Select a School'}</h4>
                     <h5>{selectedSchoolData ? selectedSchoolData.FieldOfStudy : ''}</h5>
                     <h6>{selectedSchoolData ? selectedSchoolData.State : ''}</h6>
